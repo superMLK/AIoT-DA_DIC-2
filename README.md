@@ -1,4 +1,4 @@
-# 多元迴歸特徵選擇教學網頁
+# AIoT-DA 課程 — DIC-2（Do in Class 2）說明文件
 
 [![Deploy to GitHub Pages](https://github.com/superMLK/AIoT-DA_DIC-2/actions/workflows/pages.yml/badge.svg)](https://github.com/superMLK/AIoT-DA_DIC-2/actions/workflows/pages.yml)
 
