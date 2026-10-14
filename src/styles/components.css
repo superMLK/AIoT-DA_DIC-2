@@ -1,0 +1,340 @@
+.h3 {
+  font-size: 1.05rem;
+  padding-bottom: var(--space-1);
+  border-bottom: 1px solid var(--hair);
+}
+
+/* ---------- 資料準備 ---------- */
+.dropzone {
+  border: 1.5px dashed var(--ink-2);
+  border-radius: 2px;
+  padding: var(--space-5);
+  text-align: center;
+  color: var(--ink-2);
+  cursor: pointer;
+  background: var(--paper-raised);
+}
+
+.dropzone[data-dragging='true'] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.column-list {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2px var(--space-5);
+}
+
+.column-list legend {
+  font-size: 0.85rem;
+  color: var(--ink-2);
+  margin-bottom: var(--space-1);
+  padding: 0;
+}
+
+.column-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--space-2);
+  align-items: baseline;
+  padding: 4px 0;
+  border-bottom: 1px dotted var(--hair);
+  cursor: pointer;
+}
+
+.column-item input {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+  transform: translateY(2px);
+}
+
+.column-item .name {
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.column-item .kind,
+.column-item .reason {
+  grid-column: 2;
+  font-size: 0.8rem;
+}
+
+.column-item .reason {
+  color: var(--warn);
+}
+
+ul.report {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+ul.report li {
+  margin: 2px 0;
+}
+
+/* ---------- 熱圖 ---------- */
+table.heatmap {
+  border-collapse: separate;
+  border-spacing: 2px;
+  font-size: 0.75rem;
+}
+
+table.heatmap td {
+  width: var(--cell);
+  min-width: var(--cell);
+  height: calc(var(--cell) * 0.7);
+  text-align: center;
+  border-radius: 2px;
+}
+
+table.heatmap thead th {
+  vertical-align: bottom;
+  font-weight: 500;
+  color: var(--ink-2);
+  padding: 0 0 4px;
+}
+
+table.heatmap thead th span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  display: inline-block;
+  max-height: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+table.heatmap tbody th {
+  text-align: right;
+  font-weight: 500;
+  color: var(--ink-2);
+  padding-right: 8px;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  margin-top: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.heatmap-legend .bar {
+  width: 160px;
+  height: 10px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--div-neg), var(--div-mid), var(--div-pos));
+}
+
+/* ---------- 方程式 ---------- */
+.equation-body {
+  font-size: 1.15rem;
+  line-height: 2.2;
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+  overflow-x: auto;
+}
+
+.sig-mark {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+table.three-line tr.is-sig td:first-child {
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+/* ---------- 評估：讀數列（非卡片） ---------- */
+.readouts {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 0;
+  border-top: 2px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.readout {
+  padding: var(--space-3) var(--space-3) var(--space-3) var(--space-4);
+  border-right: 1px solid var(--hair);
+}
+
+.readout:last-child {
+  border-right: 0;
+}
+
+.readout dt {
+  font-size: 0.82rem;
+  color: var(--ink-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 6px;
+  align-items: baseline;
+}
+
+.readout dt .src {
+  font-size: 0.7rem;
+  color: var(--muted);
+  border: 1px solid var(--hair);
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+.readout dd {
+  margin: 4px 0 0;
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.readout dd.extra {
+  font-size: 0.8rem;
+  color: var(--ink-2);
+  margin-top: 0;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.chart-grid .figure {
+  margin: 0;
+}
+
+.chart-table summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--ink-2);
+  margin-top: var(--space-2);
+}
+
+.swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 6px;
+  vertical-align: baseline;
+}
+
+/* ---------- 預測器 ---------- */
+.predictor-grid {
+  border-top: 2px solid var(--rule);
+}
+
+.predictor-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 200px) minmax(140px, 220px) 1fr;
+  gap: var(--space-1) var(--space-4);
+  align-items: center;
+  padding: var(--space-2) 0;
+  border-bottom: 1px dotted var(--hair);
+}
+
+.predictor-row[data-used='false'] .pname,
+.predictor-row[data-used='false'] .input,
+.predictor-row[data-used='false'] .select {
+  opacity: 0.45;
+}
+
+.predictor-row .pname {
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.predictor-row .contrib {
+  text-align: right;
+}
+
+.predictor-row .pnote {
+  grid-column: 2 / -1;
+  font-size: 0.8rem;
+  color: var(--caution);
+}
+
+.warn-text {
+  color: var(--warn);
+}
+
+.input[aria-invalid='true'] {
+  border-color: var(--warn);
+}
+
+.predictor-total {
+  border-bottom: 2px solid var(--rule);
+  padding: var(--space-2) 0;
+}
+
+.predictor-total .line {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: 2px 0;
+}
+
+.predictor-total .total {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-top: 1px solid var(--rule);
+  padding-top: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.predictor-total .total .num {
+  font-size: 1.4rem;
+}
+
+.colophon {
+  padding: var(--space-6) 0 0;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 900px) {
+  .readouts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .readout {
+    border-bottom: 1px solid var(--hair);
+  }
+
+  .readout:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .chart-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .predictor-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .predictor-row .pname {
+    grid-column: 1 / -1;
+  }
+
+  .predictor-row .pnote {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

@@ -1,0 +1,115 @@
+/* 統計課本／實驗筆記風格的設計 tokens。淺色為預設；深色依系統偏好或手動切換。 */
+:root {
+  color-scheme: light;
+  --paper: #f7f3ea;
+  --paper-raised: #fbf8f1;
+  --paper-sunken: #efe9dc;
+  --ink: #1d2433;
+  --ink-2: #4a4f5c;
+  --muted: #7a7466;
+  --rule: #2a2a28;
+  --hair: #d9d1bf;
+  --grid: #e4ddcc;
+  --accent: #1f3a6b;
+  --accent-ink: #f7f3ea;
+  --accent-soft: #e2e7f0;
+  --warn: #a8432a;
+  --warn-soft: #f3e1d8;
+  --caution: #8a6100;
+  --caution-soft: #f3e9cd;
+  --sig-soft: #e6ecdf;
+  --focus: #1f3a6b;
+
+  /* 圖表：類別色（已以 dataviz validator 驗證，CVD 警示區間以點形狀作次要編碼） */
+  --series-1: #2f5d9e;
+  --series-2: #c4622d;
+  --series-3: #8e4fa8;
+  --series-4: #0b8a62;
+  --series-5: #a87a00;
+  --series-base: #5f5a50;
+  /* 發散色階兩端與中點 */
+  --div-neg: #b5452a;
+  --div-mid: #ece6d8;
+  --div-pos: #2f5d9e;
+
+  --font-serif: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+  --font-sans: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 72px;
+
+  --nav-width: 208px;
+  --content-max: 980px;
+  --mobile-nav-h: 0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme='light'])) {
+    color-scheme: dark;
+    --paper: #1c1b19;
+    --paper-raised: #23221f;
+    --paper-sunken: #161513;
+    --ink: #ece6d8;
+    --ink-2: #bdb5a3;
+    --muted: #918a7b;
+    --rule: #d8d0bd;
+    --hair: #3d3a34;
+    --grid: #2e2c28;
+    --accent: #93b2e6;
+    --accent-ink: #1c1b19;
+    --accent-soft: #263247;
+    --warn: #e38b6f;
+    --warn-soft: #3b2620;
+    --caution: #d9ad4a;
+    --caution-soft: #3a3020;
+    --sig-soft: #26301f;
+    --focus: #93b2e6;
+    --series-1: #5a87d4;
+    --series-2: #cf6630;
+    --series-3: #a26fc0;
+    --series-4: #179a76;
+    --series-5: #b98b17;
+    --series-base: #a39c8c;
+    --div-neg: #d0694c;
+    --div-mid: #34322d;
+    --div-pos: #5a87d4;
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --paper: #1c1b19;
+  --paper-raised: #23221f;
+  --paper-sunken: #161513;
+  --ink: #ece6d8;
+  --ink-2: #bdb5a3;
+  --muted: #918a7b;
+  --rule: #d8d0bd;
+  --hair: #3d3a34;
+  --grid: #2e2c28;
+  --accent: #93b2e6;
+  --accent-ink: #1c1b19;
+  --accent-soft: #263247;
+  --warn: #e38b6f;
+  --warn-soft: #3b2620;
+  --caution: #d9ad4a;
+  --caution-soft: #3a3020;
+  --sig-soft: #26301f;
+  --focus: #93b2e6;
+  --series-1: #5a87d4;
+  --series-2: #cf6630;
+  --series-3: #a26fc0;
+  --series-4: #179a76;
+  --series-5: #b98b17;
+  --series-base: #a39c8c;
+  --div-neg: #d0694c;
+  --div-mid: #34322d;
+  --div-pos: #5a87d4;
+}
