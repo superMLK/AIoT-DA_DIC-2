@@ -34,6 +34,29 @@
   max-width: 60ch;
 }
 
+/* ---------- 資料來源列 ---------- */
+.source-bar {
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-raised);
+}
+
+.source-bar .inner {
+  max-width: calc(var(--content-max) + var(--nav-width) + 3 * var(--space-6));
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-6);
+}
+
+.source-bar .inner > * + * {
+  margin-top: var(--space-2);
+}
+
+.source-title {
+  font-size: 1rem;
+  align-self: center;
+  margin-right: var(--space-2);
+  white-space: nowrap;
+}
+
 /* ---------- 主體：側邊導覽 + 內容 ---------- */
 .shell {
   max-width: calc(var(--content-max) + var(--nav-width) + 3 * var(--space-6));
@@ -194,6 +217,14 @@
 
   .masthead {
     padding: var(--space-6) var(--space-4) var(--space-4);
+  }
+
+  .source-bar .inner {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .source-title {
+    flex-basis: 100%;
   }
 
   .shell {

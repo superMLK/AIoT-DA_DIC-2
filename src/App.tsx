@@ -1,5 +1,6 @@
 import { Masthead } from './components/layout/Masthead.tsx'
 import { SectionNav } from './components/layout/SectionNav.tsx'
+import { SourceBar } from './components/layout/SourceBar.tsx'
 import { ProgressBar, StickyControls } from './components/layout/StickyControls.tsx'
 import { BusinessSection } from './components/sections/BusinessSection.tsx'
 import { DataPreparation } from './components/sections/DataPreparation.tsx'
@@ -16,6 +17,7 @@ export function App() {
       <StoreProvider>
         <ProgressBar />
         <Masthead />
+        <SourceBar />
         <StickyControls />
         <div className="shell">
           <SectionNav />
