@@ -1,6 +1,21 @@
 # 多元迴歸特徵選擇教學網頁
 
+[![Deploy to GitHub Pages](https://github.com/superMLK/AIoT-DA_DIC-2/actions/workflows/pages.yml/badge.svg)](https://github.com/superMLK/AIoT-DA_DIC-2/actions/workflows/pages.yml)
+
 依 CRISP-DM 流程，比較 Lasso、Forward SFS、RFE、ElasticNet、Exhaustive Search 與 OLS 基準在不同特徵數 k 下的多元線性迴歸表現，用來說明「特徵越多不一定越好」的偏差與變異取捨。全部運算都在瀏覽器內完成，可直接部署成 GitHub Pages 靜態網站。
+
+- **線上展示（Demo）**：<https://supermlk.github.io/AIoT-DA_DIC-2/>
+- **原始碼（Repo）**：<https://github.com/superMLK/AIoT-DA_DIC-2>
+
+## 網站截圖
+
+頁首與資料來源列：可切換內建資料集、輸入 CSV 網址或上傳本機檔案。
+
+![頁首與資料來源列](docs/screenshots/overview.jpg)
+
+§5 Evaluation：比較全部方法時的指標讀數，以及 RMSE／R² 隨特徵數 k 變化的折線圖（以 50 Startups 為例，k = 2 時測試誤差最低）。
+
+![Evaluation 區塊的指標與 k 曲線](docs/screenshots/evaluation.jpg)
 
 ## 功能
 
@@ -61,4 +76,5 @@ src/state/       React 狀態（reducer、資料載入、主題）
 src/components/  依 CRISP-DM 階段組織的畫面元件
 tools/oracle/    產生標準答案的 Python 工具（uv 管理）
 tests/           Vitest 測試與 fixtures
+docs/screenshots/ README 使用的網站截圖
 ```
